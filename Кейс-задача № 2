@@ -1,0 +1,37 @@
+import math
+
+def y():
+  while True:
+    try:
+      num = int(input('Введите неотрицательное целое число: '))
+      if num > 0:
+        return num
+      else:
+        print('Пожалуйста, введите положительное число.')
+    except ValueError:
+        print('Ошибка! Введите целое число. ')
+
+def calculate(num):
+  if num == 0:
+    return 1
+  return math.factorial(num)
+    
+def main():
+  nomer = y()
+  otvet = calculate(nomer)
+  print (f'Факториал числа {nomer}:{otvet}')
+
+# Перезапуск, но запутался.
+#while True:
+#  main()
+#  restart = input("\n Продолжим? [0 - no, 1 - yes]")
+#  if restart == 0:
+#    break
+#        
+#  elif restart == 1:
+#    continue
+#  
+#  input("\n\n Нажмите Enter для выхода.") 
+  
+if __name__ == "__main__":
+  main()
